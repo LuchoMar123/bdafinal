@@ -25,13 +25,13 @@ body{
     background-attachment:fixed;
 }
 </style>
-<body background="../img/imagen.jpg">
+<body background="../img/imagen2.png">
     <div id="app">
         <b>
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: blue;">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: orange;">
             <div class="container">
-                <a class="navbar-brand" href="{{route ('login') }}" style="color: white;">
-                    MUNDIAL QATAR 2022
+                <a class="navbar-brand" href="{{route ('login') }}" style="color: black;">
+                    MERCOSUR
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

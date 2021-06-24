@@ -18,7 +18,7 @@
                 </div>
                 
                 <button class="btn btn-primary">
-                <a href="{{ url('partidou') }}" style="color:white">{{ __('Dirigirse a la pagina de usuarios') }}</a>
+                <a href="{{ route('paisesu.index') }}" style="color:white">{{ __('Dirigirse a la pagina de usuarios') }}</a>
                 </button> 
                 
             </div>

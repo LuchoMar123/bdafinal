@@ -18,7 +18,7 @@
                 </div>
                 
                 <button class="btn btn-primary">
-                <a href="{{ url('equipo') }}" style="color:white">{{ __('Dirigirse a la pagina de administradores') }}</a> 
+                <a href="{{ route('paises.index') }}" style="color:white">{{ __('Dirigirse a la pagina de administradores') }}</a> 
                 </button>
                   
             </div>

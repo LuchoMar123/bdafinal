@@ -26,61 +26,26 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/consulta', function () {
+    return view('paises/show');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/user', [App\Http\Controllers\HomeController::class, 'getUser']);
 
-Route::get('equipo', [EquipoController::class, 'index']);
-Route::get('equipo/create', [EquipoController::class, 'create']);
-Route::post('equipo/store', [EquipoController::class, 'store']);
-Route::get('equipo/{id}', [EquipoController::class, 'destroy']);
-Route::get('equipo/{id}/edit', [EquipoController::class, 'edit']);
-Route::post('equipo/update/{id}', [EquipoController::class, 'update']);
-
-//Rutas para sede
-Route::get('sede', [SedeController::class, 'index']);
-Route::get('sede/create', [SedeController::class, 'create']);
-Route::post('sede/store', [SedeController::class, 'store']);
-Route::get('sede/{id}', [SedeController::class, 'destroy']);
-Route::get('sede/{id}/edit', [SedeController::class, 'edit']);
-Route::post('sede/update/{id}', [SedeController::class, 'update']);
-
-//rutas para partido
-Route::get('partido', [PartidoController::class, 'index']);
-Route::get('partidou', [PartidoController::class, 'index2']);
-Route::get('partidou2', [PartidoController::class, 'index3']);
-Route::get('partido/create', [PartidoController::class, 'create']);
-Route::post('partido/store', [PartidoController::class, 'store']);
-Route::get('partido/{id}', [PartidoController::class, 'destroy']);
-Route::get('partido/{id}/edit', [PartidoController::class, 'edit']);
-Route::post('partido/update/{id}', [PartidoController::class, 'update']);
-
-//rutas para manager
-Route::get('manager', [ManagerController::class, 'index']);
-Route::get('manager/create', [ManagerController::class, 'create']);
-Route::post('manager/store', [ManagerController::class, 'store']);
-Route::get('manager/{id}', [ManagerController::class, 'destroy']);
-Route::get('manager/{id}/edit', [ManagerController::class, 'edit']);
-Route::post('manager/update/{id}', [ManagerController::class, 'update']);
-
-//rutas para jugador
-Route::get('jugador', [JugadorController::class, 'index']);
-Route::get('jugadoru', [JugadorController::class, 'index2']);
-Route::get('jugador/create', [JugadorController::class, 'create']);
-Route::post('jugador/store', [JugadorController::class, 'store']);
-Route::get('jugador/{id}', [JugadorController::class, 'destroy']);
-Route::get('jugador/{id}/edit', [JugadorController::class, 'edit']);
-Route::post('jugador/update/{id}', [JugadorController::class, 'update']);
-
-//ruta de busqueda
-Route::get('equipo/search/nombre_equipo', [EquipoController::class, 'search']);
-Route::get('equipo/search/id', [EquipoController::class, 'search2']);
-Route::get('sede/search/sede_nombre', [SedeController::class, 'search']);
-Route::get('sede/search/id', [SedeController::class, 'search2']);
-Route::get('partido/search/partido_nombre', [PartidoController::class, 'search']);
-Route::get('partido/search/id', [PartidoController::class, 'search2']);
-Route::get('manager/search/manager_nombre', [ManagerController::class, 'search']);
-Route::get('manager/search/id', [ManagerController::class, 'search2']);
-Route::get('jugador/search/jugador_nombre', [JugadorController::class, 'search']);
-Route::get('jugador/search/id', [JugadorController::class, 'search2']);
+Route::resource('paises', 'App\Http\Controllers\CbPaisesController');
+Route::resource('paisesu', 'App\Http\Controllers\CbPaises2Controller');
+Route::resource('representantes', 'App\Http\Controllers\CbRepresentantesController');
+Route::resource('representantesu', 'App\Http\Controllers\CbRepresentantes2Controller');
+Route::resource('relaciones', 'App\Http\Controllers\CbRelacionesController');
+Route::resource('relacionesu', 'App\Http\Controllers\CbRelaciones2Controller');
+Route::resource('exportaciones', 'App\Http\Controllers\CbExportacionesController');
+Route::resource('exportacionesu', 'App\Http\Controllers\CbExportaciones2Controller');
+Route::resource('productos', 'App\Http\Controllers\CbProductosController');
+Route::resource('productos2', 'App\Http\Controllers\CbProductos2Controller');
+Route::resource('productos3', 'App\Http\Controllers\CbProductos3Controller');
+Route::resource('productos4', 'App\Http\Controllers\CbProductos4Controller');
+Route::resource('productos5', 'App\Http\Controllers\CbProductos5Controller');
+Route::resource('productos6', 'App\Http\Controllers\CbProductos6Controller');
